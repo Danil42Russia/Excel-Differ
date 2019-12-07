@@ -144,5 +144,10 @@ namespace Excel_Differ
                 MessageBox.Show(@"Не выбраны файлы для сравнения");
             }
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show(Properties.Resources.Copyright);
+        }
     }
 }

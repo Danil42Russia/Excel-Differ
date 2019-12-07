@@ -35,6 +35,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.Diff = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -94,11 +95,22 @@
             this.Diff.UseVisualStyleBackColor = true;
             this.Diff.Click += new System.EventHandler(this.Diff_Click);
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(12, 288);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(590, 45);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Created Danil42Russia";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 297);
+            this.ClientSize = new System.Drawing.Size(614, 342);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Diff);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -106,12 +118,13 @@
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(639, 336);
+            this.MaximumSize = new System.Drawing.Size(630, 381);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(639, 336);
+            this.MinimumSize = new System.Drawing.Size(630, 381);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Excel Differ";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,6 +138,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button Diff;
+        private System.Windows.Forms.Label label1;
     }
 }
-
