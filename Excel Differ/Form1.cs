@@ -111,17 +111,19 @@ namespace Excel_Differ
             var excelSheets = excelWorkbook.Sheets;
             var excelWorksheet = (Excel.Worksheet) excelSheets.Item[1];
 
-            var indexInclude = 1;
+            var indexInclude = 2;
+            excelWorksheet.Cells[1, 1] = @"Повторяются";
             foreach (var value in report.Item1)
             {
-                excelWorksheet.Cells[1, indexInclude] = value;
+                excelWorksheet.Cells[indexInclude, 1] = value;
                 indexInclude++;
             }
 
-            var indexNotInclude = 1;
+            var indexNotInclude = 2;
+            excelWorksheet.Cells[1, 2] = @"Не повторяются";
             foreach (var value in report.Item2)
             {
-                excelWorksheet.Cells[2, indexNotInclude] = value;
+                excelWorksheet.Cells[indexNotInclude, 2] = value;
                 indexNotInclude++;
             }
         }
